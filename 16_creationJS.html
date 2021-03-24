@@ -1,0 +1,22 @@
+
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mi página</title>
+	</head>
+	<script>
+		function cuentameMas() {
+			for (var i = 0; i < 10; i++) {
+				var element = document.createElement("p");
+				element.innerHTML = i;
+				document.body.appendChild(element);
+			}
+		}
+	</script>
+	<body>
+		<button onclick="cuentameMas()">Cuéntame más</button>
+	</body>
+</html>
+

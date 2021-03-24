@@ -1,0 +1,33 @@
+
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mi página</title>
+	</head>
+	<script>
+		class Humano
+		{
+			tipo = "humano";
+			constructor(nombre) {
+				this._nombre = nombre;
+			}
+			get nombre() {
+				return this._nombre;
+			}
+			set nombre(nom) {
+				this._nombre = nom;
+			}
+			quienEres(elemento) {
+				elemento.innerHTML= "Hola me llamo " + this.nombre + " y soy un " + this.tipo;
+			}
+		}
+		var yo = new Humano("Jesus");
+	</script>
+	<body>
+		<button onclick="yo.quienEres(document.getElementById('presentacion'));">¿Quien eres?</button>
+		<h3 id="presentacion"></h3>
+	</body>
+</html>
+

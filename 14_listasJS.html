@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mi página</title>
+	</head>
+	<script>
+		function escribirLista() {
+				var pokemones = ["Bulbasaur", "Ivysaur", "Venosaur"];
+				var fLen = pokemones.length;
+				var text = "<ol>";
+				for (var i = 0; i < fLen; i++) {
+				  text += "<li>" + pokemones[i] + "</li>";
+				}
+				text += "</ol>";
+				document.getElementById("miLista").innerHTML = text;
+		}
+		var funciones = [escribirLista];
+	</script>
+	<body>
+		<h3>Lista</h3>
+		<button onclick="funciones[0]();">¿Qué lista?</button>
+		<p id="miLista"></p>
+	</body>
+</html>
